@@ -11,8 +11,161 @@ body{
     line-height: 1.6em;
 }
 
-header{
-  position: fixed;  
+header .container{
+  padding: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgb(245, 245,245);
+  align-items: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+header .logo{
+  height: 64px;
+  width: 64px;
+}
+
+header img{
+  height: 100%;
+  width: 100%;
+}
+
+header nav{
+  display: flex;
+  flex-direction: column;
+  font-display: none;
+  align-items: center;
+}
+
+header ul{
+  align-items: center;
+  display: flex;
+  list-style: none;
+}
+
+header li{
+  padding: 5px;
+}
+
+header a{
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+#hero {
+  height: 40vh;
+  margin-bottom: 50px;
+}
+
+#hero img{
+  width: 100%;
+  height: 40vh;
+}
+
+#sobrenosotros {
+  align-items: center;
+}
+
+#sobre-nosotros .container{
+  text-align: center;
+  background-color: rgba(30,30,30);
+  color: white;
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+#sobrenosotros h1{
+  margin-bottom: 15px;
+}
+
+#sobre-nosotros p{
+}
+
+#caracteristicas{
+  text-align: center;
+}
+
+#caracteristicas .carac-titulo{
+  margin-bottom: 30px;
+}
+
+#caracteristicas .carac{
+  margin-bottom: 30px;
+}
+
+#caracteristicas h3{
+  font-size: 1.5em;
+}
+
+#caracteristicas p{
+  margin-bottom: 10px;
+}
+
+#caracteristicas img{
+  height: 30vh;
+  width: 30vh;
 }
 
 
+
+
+#modelos img{
+  display: none;
+}
+
+
+#modelos p{
+  display: none;
+}
+
+#modelos button{
+  display: none;
+}
+
+#modelos .container{
+  text-align: center;
+  padding: 20px;
+}
+
+#modelos h2{
+  padding: 10px;
+  font-size: 35px;
+}
+
+#modelos .modelos-caja{
+  color: white;
+  font-size: 25px;
+}
+
+.carta-modelos:first-child{
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/Grizzly/imagenes/gato3.jpeg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.carta-modelos:nth-child(2){
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/Grizzly/imagenes/gato3.jpeg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+.carta-modelos:nth-child(3){
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/Grizzly/imagenes/gato3.jpeg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
