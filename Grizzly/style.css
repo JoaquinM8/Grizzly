@@ -2,29 +2,44 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: Helvetica;
+    line-height: normal;
 }
 
 body{
-    background-color: #fcfcf1;
+    background-color: #212529;
     color: #212529;
     line-height: 1.6em;
 }
 
+header{
+  background-color: rgba(0,0,0,0);
+  padding: 10px;
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
 header .container{
+  width: 95%;
   padding: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-  background-color: rgb(245, 245,245);
+  background-color: rgb(32, 32, 32);
   align-items: center;
-  margin-top: 5px;
-  margin-bottom: 5px;
+  border: solid 4px;
+  border-color: rgb(216, 184, 0);
+  border-radius: 40px;
 }
 
 header .logo{
-  height: 64px;
-  width: 64px;
+  height: 80px;
+  width: 80px;
 }
 
 header img{
@@ -47,22 +62,23 @@ header ul{
 
 header li{
   padding: 5px;
+  font-size: 1.3em;
 }
 
 header a{
   text-decoration: none;
   font-weight: bold;
-  color: black;
+  color: gold;
 }
 
 #hero {
-  height: 40vh;
-  margin-bottom: 50px;
+  margin-top: 118px;
+  height: 80vh;
 }
 
 #hero img{
   width: 100%;
-  height: 40vh;
+  height: 80vh;
 }
 
 #sobrenosotros {
@@ -73,31 +89,41 @@ header a{
   text-align: center;
   background-color: rgba(30,30,30);
   color: white;
-  padding: 20px;
-  margin-bottom: 30px;
+  padding: 30px;
 }
 
-#sobrenosotros h1{
+#sobre-nosotros h1{
   margin-bottom: 15px;
+  color: rgb(216, 184, 0);
 }
 
 #sobre-nosotros p{
 }
 
 #caracteristicas{
+  background-color: rgb(231, 231, 231);
+}
+
+#caracteristicas .container{
   text-align: center;
+  padding: 20px;
+  align-items: center;
 }
 
 #caracteristicas .carac-titulo{
   margin-bottom: 30px;
+  color: goldenrod;
+  font-size: 1.5em;
 }
 
 #caracteristicas .carac{
-  margin-bottom: 30px;
+  padding: 10px;
 }
 
 #caracteristicas h3{
   font-size: 1.5em;
+  color: black;
+  font-weight: bold;
 }
 
 #caracteristicas p{
@@ -125,6 +151,10 @@ header a{
   display: none;
 }
 
+#modelos{
+  background-color: #212529;
+}
+
 #modelos .container{
   text-align: center;
   padding: 20px;
@@ -133,10 +163,16 @@ header a{
 #modelos h2{
   padding: 10px;
   font-size: 35px;
+  color: gold;
+  margin-bottom: 20px;
+}
+
+#modelos h3{
+  white-space: nowrap;
 }
 
 #modelos .modelos-caja{
-  color: white;
+  color: gold;
   font-size: 25px;
 }
 
@@ -168,4 +204,57 @@ header a{
   padding: 100px;
   margin-bottom: 20px;
   border-radius: 10px;
+}
+
+
+
+
+
+#contactos{
+  background-color: rgb(231, 231, 231);
+  padding: 15px;
+}
+
+
+#contactos .container{
+  text-align: center;
+  
+}
+
+#contactos .h1{
+  color: goldenrod;
+}
+
+#contactos ul{
+  list-style: none;
+}
+
+
+#contactos .redes{
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: solid 5px black;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.15em;
+}
+
+#contactos img{
+  width: 20px;
+}
+
+#contactos .redes:hover{
+  background-color: black;
+  color: gold;
+}
+
+
+footer{
+  color: rgb(110, 82, 11);
+  text-align: center;
 }
