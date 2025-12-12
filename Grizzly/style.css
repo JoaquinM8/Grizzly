@@ -6,6 +6,10 @@
     line-height: normal;
 }
 
+a{
+  text-decoration: none;
+}
+
 body{
     background-color: #212529;
     color: #212529;
@@ -25,7 +29,7 @@ header{
 }
 
 header .container{
-  width: 95%;
+  width: 97%;
   padding: 5px;
   display: flex;
   flex-direction: row;
@@ -38,8 +42,8 @@ header .container{
 }
 
 header .logo{
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
 }
 
 header img{
@@ -61,8 +65,11 @@ header ul{
 }
 
 header li{
-  padding: 5px;
-  font-size: 1.3em;
+  padding: 6px;
+  margin: 2px;
+  font-size: 1.2em;
+  background-color: #131211;
+  border-radius: 30px;
 }
 
 header a{
@@ -93,11 +100,8 @@ header a{
 }
 
 #sobre-nosotros h1{
-  margin-bottom: 15px;
+  margin-bottom: 30px;
   color: rgb(216, 184, 0);
-}
-
-#sobre-nosotros p{
 }
 
 #caracteristicas{
@@ -106,18 +110,22 @@ header a{
 
 #caracteristicas .container{
   text-align: center;
-  padding: 20px;
+  padding: 30px;
   align-items: center;
 }
 
 #caracteristicas .carac-titulo{
   margin-bottom: 30px;
-  color: goldenrod;
+  color: rgb(0, 0, 0);
   font-size: 1.5em;
 }
 
 #caracteristicas .carac{
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 #caracteristicas h3{
@@ -131,8 +139,8 @@ header a{
 }
 
 #caracteristicas img{
-  height: 30vh;
-  width: 30vh;
+  height: 28vh;
+  width: 28vh;
 }
 
 
@@ -157,53 +165,66 @@ header a{
 
 #modelos .container{
   text-align: center;
+  justify-content: center;
   padding: 20px;
 }
 
-#modelos h2{
+#modelos h1{
   padding: 10px;
   font-size: 35px;
   color: gold;
   margin-bottom: 20px;
 }
 
-#modelos h3{
-  white-space: nowrap;
-}
-
-#modelos .modelos-caja{
+#modelos h2{
+  padding: 10px;
+  font-size: 45px;
   color: gold;
-  font-size: 25px;
+  margin-bottom: 20px;
 }
 
-.carta-modelos:first-child{
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/Grizzly/imagenes/gato3.jpeg);
+ 
+
+.carta-modelos1{
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/Grizzly/imagenes/m1portada.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 100px;
+  height: 12em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
   border-radius: 10px;
+  box-shadow: 8px 8px 8px #131211;
 }
 
-.carta-modelos:nth-child(2){
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/Grizzly/imagenes/gato3.jpeg);
+.carta-modelos2{
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/Grizzly/imagenes/m2portada.jpg);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 100px;
+  height: 12em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
   border-radius: 10px;
+  box-shadow: 8px 8px 8px #131211;
 }
 
-.carta-modelos:nth-child(3){
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/Grizzly/imagenes/gato3.jpeg);
+.carta-modelos3{
+  background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/Grizzly/imagenes/m3portada.png);
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 100px;
+  height: 12em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
   border-radius: 10px;
+  box-shadow: 8px 8px 8px #131211;
 }
 
 
@@ -212,25 +233,28 @@ header a{
 
 #contactos{
   background-color: rgb(231, 231, 231);
-  padding: 15px;
+  padding: 20px;
 }
 
 
 #contactos .container{
   text-align: center;
-  
 }
 
-#contactos .h1{
-  color: goldenrod;
+#contactos h1{
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-size: 2.3em;
 }
+
 
 #contactos ul{
   list-style: none;
 }
 
-
 #contactos .redes{
+
+  background-color: rgba(0,0,0,0.05);
   text-align: center;
   align-items: center;
   margin: 10px;
@@ -240,12 +264,15 @@ header a{
   display: flex;
   justify-content: center;
   
+  height: 50px;
+
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 1.15em;
+  color: #212529;
 }
 
 #contactos img{
   width: 20px;
+  margin-right: 10px;
 }
 
 #contactos .redes:hover{
@@ -253,8 +280,12 @@ header a{
   color: gold;
 }
 
+#contactos .redes:hover img{
+  display: none;
+}
 
 footer{
-  color: rgb(110, 82, 11);
+  padding: 10px;
+  color: rgb(58, 54, 1);
   text-align: center;
 }
