@@ -6,35 +6,30 @@
     line-height: normal;
 }
 
+
 body{
     background-color: #212529;
-    color: #212529;
+    color: #ffffff;
     line-height: 1.6em;
 }
 
+
+h1{font-size: 2em;}
+p{font-size: 0.9em;}
+
+
+
 header{
-  background-color: rgba(0,0,0,0);
   padding: 10px;
-  
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
+  height: 10vh;
+  background-color: rgba(255, 245, 106, 0.144);
 }
 
 header .container{
-  width: 97%;
-  padding: 5px;
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
-  background-color: rgb(32, 32, 32);
+  justify-content: space-between;
   align-items: center;
-  border: solid 4px;
-  border-color: rgb(216, 184, 0);
-  border-radius: 40px;
 }
 
 header .logo{
@@ -42,31 +37,99 @@ header .logo{
   width: 60px;
 }
 
+header .desplegable{
+  height: 30px;
+  width: 30px;
+}
+
 header img{
   height: 100%;
   width: 100%;
-}
-
-header nav{
-  display: flex;
-  flex-direction: column;
-  font-display: none;
-  align-items: center;
-}
-
-header ul{
-  align-items: center;
-  display: flex;
-  list-style: none;
-}
-
-header li{
-  padding: 5px;
-  font-size: 1.3em;
 }
 
 header a{
   text-decoration: none;
   font-weight: bold;
   color: gold;
+}
+
+
+
+
+
+
+
+#hero{
+  background-color: rgb(248, 248, 248);
+  color: black;
+  padding-top: 10px;
+  height: 80vh;
+}
+
+#hero img{
+  height: 70vh;
+}
+
+
+
+
+#informacion { 
+  margin: 10px;
+  height: 60vh;
+}
+
+
+
+
+
+
+#contactos{
+  background-color: rgb(231, 231, 231);
+  padding: 20px;
+}
+
+#contactos .container{
+  text-align: center;
+}
+
+#contactos h1{
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-size: 2.3em;
+}
+
+#contactos ul{
+  list-style: none;
+}
+
+#contactos .redes{
+
+  background-color: rgba(0,0,0,0.05);
+  text-align: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+  border: solid 5px black;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  
+  height: 50px;
+
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #212529;
+}
+
+#contactos img{
+  width: 20px;
+  margin-right: 10px;
+}
+
+#contactos .redes:hover{
+  background-color: black;
+  color: gold;
+}
+
+#contactos .redes:hover img{
+  display: none;
 }
