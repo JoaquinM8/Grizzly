@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Helvetica;
+    font-family: "Plus Jakarta Sans", sans-serif;
     line-height: normal;
 }
 
@@ -16,42 +16,72 @@ body{
 h1{font-size: 2em;}
 p{font-size: 0.9em;}
 
-
-
-header{
-  padding: 5px;
+.nav{
   background-color: rgb(0, 0, 0);
 }
 
-header .container{
+.nav_container{
+  background-color: rgb(0, 0, 0);
+
+  width: min(90%, 750px);
+  margin: 0 auto;
+
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
   align-items: center;
-}
-
-header .logo{
+  justify-content: space-between;
   height: 60px;
-  width: 60px;
+  
+  --transform-menu-show: translate(-100%);
 }
 
-header .desplegable{
-  height: 30px;
-  width: 30px;
+.nav_container:has(.nav_input:checked){
+  --transform-menu-show: translate(0);
 }
 
-header img{
-  height: 100%;
-  width: 100%;
+
+.nav_figure, .nav_toggle{
+  z-index: 10;
 }
 
-header a{
-  text-decoration: none;
-  font-weight: bold;
+.nav_input{
+  display: none;
+}
+
+.nav_toggle{
+  width: 40px;
+  height: 40px;
+  background-image: url(/Grizzly/imagenes/menulineas.png);
+  background-size: cover;
+  cursor: pointer;
+}
+
+.nav_list{
+  transform: var(--transform-menu-show);
+  transition: .5s transform;
+
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  gap: 2rem;
+  text-align: center;
+
+  padding: 1.5rem 5%;
+  background-color: rgb(0, 0, 0);
+  list-style: none;
+}
+
+.nav_link{
   color: gold;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
 }
 
-
+.nav_figure img{
+  height: 50px;
+  width: 80px;
+}
 
 
 
@@ -135,4 +165,10 @@ header a{
 
 #contactos .redes:hover img{
   display: none;
+}
+
+footer{
+  padding: 10px;
+  color: rgb(58, 54, 1);
+  text-align: center;
 }
