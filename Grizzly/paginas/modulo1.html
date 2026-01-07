@@ -13,19 +13,20 @@
 
         <div class="nav_container">
 
-            <figure class="nav_figure">
-                    <img src="" alt="Grizzly Logo" class="nav_logo">
-            </figure>
+            <div class="nav_header">
+                <figure class="nav_figure">
+                        <img src="/Grizzly/imagenes/Grizzly_amarillo_fondo_negro.png" alt="Grizzly Logo" class="nav_logo">
+                </figure>
 
-            <label class="nav_toggle">
-                <input type="checkbox" id="menu-input" class="nav_input">
-            </label>
-
+                <label class="nav_toggle">
+                    <input type="checkbox" id="menu-input" class="nav_input">
+                </label>
+            </div>
             <ul class="nav_list">
-                <li class="nav_item"><a href="#" class="nav_link">HOME</a></li>
-                <li class="nav_item"><a href="#" class="nav_link">GALLERY</a></li>
-                <li class="nav_item"><a href="#" class="nav_link">CONTACT</a></li>
-                <li class="nav_item"><a href="#" class="nav_link">ABOUT US</a></li>
+                <li class="nav_item"><a href="/Grizzly/index.html" class="nav_link">INICIO</a></li>
+                <li class="nav_item"><a href="/Grizzly/index.html#caracteristicas" class="nav_link">CARACTERISTICAS</a></li>
+                <li class="nav_item"><a href="/Grizzly/index.html#modelos" class="nav_link">MODELOS</a></li>
+                <li class="nav_item"><a href="#contactos" class="nav_link">CONTACTOS</a></li>
             </ul>
 
         </div>
@@ -34,20 +35,29 @@
         
     </nav>
 
-    <section id="hero">
+<section id="hero">
+    <div class="container">
 
-        <div class="container">
+        <h1>MÓDULO 1</h1>
 
-            <h1> Módulo 1 </h1>
-
-            <div class="slider">
-                <img src="/Grizzly/imagenes/m1portada.jpg" alt="modulo1">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <img src="https://picsum.photos/id/101/800/450" class="slide-item" alt="Imagen 1">
+                <img src="/Grizzly/imagenes/m1portada.jpg" class="slide-item" alt="Imagen 2">
+                <img src="/Grizzly/imagenes/100_0833.JPG" class="slide-item" alt="Imagen 3">
             </div>
 
+            <button id="prevBtn">&lt;</button>
+            <button id="nextBtn">&gt;</button>
+
+            <div class="carousel-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
         </div>
-
-    </section>
-
+    </div>
+</section>
 
 
     <section id="informacion">
@@ -105,6 +115,8 @@
     <footer>
         <p>&copy; 2026 Grizzly Hogar. Todos los derechos reservados.</p>
     </footer>
+
+    <script src="/Grizzly/script.js"></script>
 
 </body>
 </html>
