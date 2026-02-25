@@ -203,6 +203,17 @@ p{font-size: 0.9em;}
 
 .dot.active { background-color: white; }
 
+.carousel-slide {
+    cursor: grab;
+}
+
+.carousel-slide:active {
+    cursor: grabbing;
+}
+
+
+
+
 
 
 #informacion { 
@@ -211,6 +222,34 @@ p{font-size: 0.9em;}
 }
 
 
+#compra{
+  text-align: center;
+  color: rgb(0, 0, 0);
+}
+
+.contactanos{
+  background-color: rgb(231, 231, 231);
+  text-align: center;
+  padding: 20px;
+}
+
+.boton-contactanos{
+  background-image: linear-gradient(to right, #fed54f 0%, #feed00 100%);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  justify-content: center;
+  margin: auto;
+  max-width: 60%;
+}
+
+#compra a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.2em;
+  font-weight: normal;
+}
 
 
 
