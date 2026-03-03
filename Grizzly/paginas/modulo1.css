@@ -218,36 +218,55 @@ p{font-size: 0.9em;}
 
 #informacion { 
   margin: 10px;
-  height: 40vh;
+  height: 20vh;
 }
 
 
 #compra{
-  text-align: center;
   color: rgb(0, 0, 0);
+  height: 40vh;
+  display: flex;
+  align-items: center;
+}
+
+.compra-texto h2{
+  text-align: center;
+  font-weight: 500;
+  font-size: 2em;
+  padding: 10px;
+  color: white;
+}
+
+#compra .container{
+  width: 100%;
+  margin: auto;
+  height: 40vh;
+  display: flex;
+  align-items: center;
 }
 
 .contactanos{
-  background-color: rgb(231, 231, 231);
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  padding: 20px;
+  gap: 40px;
+  padding: 30px 0;
 }
 
 .boton-contactanos{
-  background-image: linear-gradient(to right, #fed54f 0%, #feed00 100%);
+  background-image: linear-gradient(to right, #fed54f 0%, #e4d500 100%);
   padding: 10px 20px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  justify-content: center;
   margin: auto;
-  max-width: 60%;
+  max-width: 90%;
 }
 
 #compra a{
   text-decoration: none;
   color: rgb(0, 0, 0);
-  font-size: 1.2em;
+  font-size: 1.5em;
   font-weight: normal;
 }
 
@@ -256,7 +275,11 @@ p{font-size: 0.9em;}
 
 #contactos{
   background-color: rgb(255, 255, 255);
-  padding: 20px;
+  padding: 10px;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #contactos a{
@@ -269,7 +292,7 @@ p{font-size: 0.9em;}
 
 #contactos h1{
   color: rgb(0, 0, 0);
-  padding: 10px;
+  padding: 30px 0;
   font-size: 2.3em;
 }
 
@@ -279,12 +302,10 @@ p{font-size: 0.9em;}
 
 #contactos .redes{
 
-  background-color: rgba(0,0,0,0.05);
   text-align: center;
   align-items: center;
   margin: 10px;
   padding: 10px;
-  border: solid 5px black;
   border-radius: 25px;
   display: flex;
   justify-content: center;
@@ -311,7 +332,8 @@ p{font-size: 0.9em;}
 }
 
 footer{
-  padding: 10px;
+  background-color: rgb(255, 255, 255);
+  padding: 0 10px;
   color: rgb(0, 0, 0);
   text-align: center;
 }
