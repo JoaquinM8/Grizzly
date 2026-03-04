@@ -1,43 +1,95 @@
 const carouselSlide = document.querySelector('.carousel-slide');
-const images = document.querySelectorAll('.carousel-slide img, .carousel-slide video');
+const images = document.querySelectorAll('.slide-item');
 const dots = document.querySelectorAll('.dot');
 const prevBtn = document.querySelector('#prevBtn');
 const nextBtn = document.querySelector('#nextBtn');
 
 let counter = 0;
+let isDragging = false;
+let startPos = 0;
+let prevTranslate = 0;
 
 function updateCarousel() {
-    // Obtenemos el ancho real en el momento del click
     const size = images[0].clientWidth;
+    prevTranslate = -counter * size;
+    carouselSlide.style.transition = 'transform 0.4s cubic-bezier(0.45, 0.05, 0.55, 0.95)';
+    carouselSlide.style.transform = `translateX(${prevTranslate}px)`;
     
-    // Aplicamos la transformación
-    carouselSlide.style.transform = `translateX(${-size * counter}px)`;
-    
-    // Actualizamos los indicadores (dots)
     dots.forEach((dot, index) => {
         dot.classList.toggle('active', index === counter);
     });
 }
 
-// Evento Siguiente
+// --- LOOP INFINITO EN BOTONES ---
 nextBtn.addEventListener('click', () => {
-    if (counter < images.length - 1) {
+    if (counter >= images.length - 1) {
+        counter = 0; // Vuelve al inicio
+    } else {
         counter++;
-        updateCarousel();
     }
+    updateCarousel();
 });
 
-// Evento Anterior
 prevBtn.addEventListener('click', () => {
-    if (counter > 0) {
+    if (counter <= 0) {
+        counter = images.length - 1; // Va al final
+    } else {
         counter--;
-        updateCarousel();
     }
+    updateCarousel();
 });
 
-// RECALCULAR SI SE CAMBIA EL TAMAÑO DE LA VENTANA
-// (Muy importante para que no se desfase el carrusel)
-window.addEventListener('resize', updateCarousel);
+// --- LÓGICA DE ARRASTRE CON LOOP ---
+function touchStart(event) {
+    startPos = getPositionX(event);
+    isDragging = true;
+    carouselSlide.style.transition = 'none';
+}
 
-// Asegurarnos de que el primer render sea correcto
-window.addEventListener('load', updateCarousel);
+function touchMove(event) {
+    if (isDragging) {
+        const currentPosition = getPositionX(event);
+        const diff = currentPosition - startPos;
+        const translate = prevTranslate + diff;
+        carouselSlide.style.transform = `translateX(${translate}px)`;
+    }
+}
+
+function touchEnd(event) {
+    if (!isDragging) return;
+    isDragging = false;
+    
+    const finalDiff = (event.type.includes('mouse') ? event.pageX : event.changedTouches[0].clientX) - startPos;
+
+    // Umbral de 50px para cambiar
+    if (finalDiff < -50) {
+        // Swipe Izquierda -> Siguiente
+        if (counter >= images.length - 1) counter = 0;
+        else counter++;
+    } else if (finalDiff > 50) {
+        // Swipe Derecha -> Anterior
+        if (counter <= 0) counter = images.length - 1;
+        else counter--;
+    }
+
+    updateCarousel();
+}
+
+// Helper para posición
+function getPositionX(event) {
+    return event.type.includes('mouse') ? event.pageX : event.touches[0].clientX;
+}
+
+// Event Listeners (Mouse y Touch)
+carouselSlide.addEventListener('touchstart', touchStart);
+carouselSlide.addEventListener('touchend', touchEnd);
+carouselSlide.addEventListener('touchmove', touchMove);
+carouselSlide.addEventListener('mousedown', touchStart);
+carouselSlide.addEventListener('mouseup', touchEnd);
+carouselSlide.addEventListener('mouseleave', touchEnd);
+carouselSlide.addEventListener('mousemove', touchMove);
+
+// Evitar arrastre de imagen
+images.forEach(img => img.addEventListener('dragstart', (e) => e.preventDefault()));
+
+window.addEventListener('resize', updateCarousel);
