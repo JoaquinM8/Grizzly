@@ -106,19 +106,18 @@ p{font-size: 0.9em;}
 
 #hero{
     margin-top: 20px;
-    margin-bottom: 20px;
 }
 
 #hero h1{
     text-align: center;
     color: gold;
-    font-size: 2.5em;
-    margin-bottom: 10px;
+    font-size: 3em;
+    margin-bottom: 20px;
     text-shadow: 2.5px 2.5px 0 rgb(0, 0, 0);
 }
 
 .carousel-container {
-    height: 40vh;
+    height: 70vh;
     position: relative;
     width: 90%;
     max-width: 800px;
@@ -138,14 +137,14 @@ p{font-size: 0.9em;}
 .carousel-slide img, .carousel-slide video {
     width: 100%;
     min-width: 100%;
-    height: 40vh;
+    height: 70vh;
 }
 
 /* Botones */
 #prevBtn, #nextBtn {
     /* 1. Definimos un tamaño igual para ancho y alto para que sea circular/cuadrado */
-    width: 25px; 
-    height: 25px;
+    width: 30px; 
+    height: 30px;
     
     /* 2. FLEXBOX: La magia para centrar */
     display: flex;
@@ -161,7 +160,7 @@ p{font-size: 0.9em;}
     border: none;
     border-radius: 50%; /* Esto los hace redondos */
     cursor: pointer;
-    font-size: 13px; /* Tamaño de la flecha */
+    font-size: 15px; /* Tamaño de la flecha */
     font-weight: bold;
     z-index: 10;
     transition: all 0.3s ease;
@@ -213,13 +212,36 @@ p{font-size: 0.9em;}
 
 
 
-
-
-
-#informacion { 
-  margin: 10px;
-  height: 20vh;
+#informacion{
+  height: 60vh;
+  margin: 20px 0;
 }
+
+#informacion .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  height: 60vh;
+}
+
+#informacion .container p{
+  font-size: 1em;
+  text-align: center;
+}
+
+
+
+
+.planos-contenedor{
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
 
 
 #compra{
@@ -237,10 +259,14 @@ p{font-size: 0.9em;}
   color: white;
 }
 
+#compra{
+  height: 50vh;
+}
+
 #compra .container{
   width: 100%;
   margin: auto;
-  height: 40vh;
+  height: 50vh;
   display: flex;
   align-items: center;
 }
@@ -275,11 +301,11 @@ p{font-size: 0.9em;}
 
 #contactos{
   background-color: rgb(255, 255, 255);
-  padding: 10px;
   height: 50vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 200px 0;
 }
 
 #contactos a{
@@ -333,7 +359,8 @@ p{font-size: 0.9em;}
 
 footer{
   background-color: rgb(255, 255, 255);
-  padding: 0 10px;
+  padding: 10px;
   color: rgb(0, 0, 0);
   text-align: center;
+  font-size: 0.7em;
 }
