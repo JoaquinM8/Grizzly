@@ -69,6 +69,11 @@ body{
   margin-right: 10px;
 }
 
+.nav_listpc{
+  display: none;
+}
+
+
 .nav_list{
   transform: var(--transform-menu-show);
   transition: .5s transform;
@@ -92,6 +97,11 @@ body{
   font-weight: bold;
   text-decoration: none;
 }
+
+.nav_figurepc{
+  display: none;
+}
+
 
 .nav_figure{
   margin-left: 10px;
@@ -212,21 +222,6 @@ body{
   width: 28vh;
 }
 
-
-
-
-#modelos img{
-  display: none;
-}
-
-#modelos p{
-  display: none;
-}
-
-#modelos button{
-  display: none;
-}
-
 #modelos{
   margin-top: 40px;
   margin-bottom: 40px;
@@ -294,36 +289,6 @@ body{
   box-shadow: 8px 8px 8px #131211;
 }
 
-.carta-modelos3{
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/Grizzly/imagenes/m3portada.png);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 12em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 8px 8px 8px #131211;
-}
-
-.carta-modelosa{
-  background-image: linear-gradient(0deg, rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/Grizzly/imagenes/100_0833.JPG);
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 12em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  border-radius: 10px;
-  box-shadow: 8px 8px 8px #131211;
-}
-
-
-
 
 #contactos{
   background-color: rgb(255, 255, 255);
@@ -389,4 +354,93 @@ footer{
   color: rgb(0, 0, 0);
   text-align: center;
   font-size: 0.7em;
+}
+
+@media (min-width: 870px) {
+
+  .nav_container{
+      --transform-menu-show: translate(0);
+      width: min(90%, 1920px);
+      justify-content: space-between;
+  }
+
+  .nav_header{
+    padding: 0 50px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9),rgba(0,0,0,0.75)), url(/Grizzly/imagenes/osobosque.avif);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .nav_figurepc{
+    display: contents;
+    margin-left: 10px;
+  }
+
+  .nav_figurepc img{
+    height: 50px;
+    width: 80px;
+  }
+
+  .nav_listpc{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+
+  .nav_figure{
+    display: none;
+  }
+
+  .nav_list{
+    display: none;
+  }
+
+  .nav_toggle{
+      display: none;
+  }
+
+
+
+
+
+  #sobre-nosotros{
+    height: 60vh;
+  }
+
+  #sobre-nosotros .container{
+    width: 650px;
+    margin: auto;
+    padding: 0 50px;
+    height: 60vh;
+  }
+
+  #sobre-nosotros h1{
+    font-size: 3em;
+  }
+
+  #sobre-nosotros p{
+    font-size: 1.25em;
+  }
+
+
+
+  #caracteristicas .carac-contenedor{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: auto;
+    width: 700px;
+  }
+
+  #caracteristicas .carac{
+    justify-content: space-between;
+  }
+
+  .modelos-caja{
+    flex-direction: row;
+    margin: auto;
+    width: 800px;
+  }
+
 }
