@@ -69,6 +69,10 @@ p{font-size: 0.9em;}
   margin-right: 10px;
 }
 
+.nav_listpc{
+  display: none;
+}
+
 .nav_list{
   transform: var(--transform-menu-show);
   transition: .5s transform;
@@ -102,7 +106,9 @@ p{font-size: 0.9em;}
   width: 80px;
 }
 
-
+.nav_figurepc{
+  display: none;
+}
 
 #hero{
     margin-top: 20px;
@@ -115,7 +121,20 @@ p{font-size: 0.9em;}
     margin-bottom: 20px;
     text-shadow: 2.5px 2.5px 0 rgb(0, 0, 0);
 }
+  .carousel-slide picture, 
+  .carousel-slide img, 
+  .carousel-slide video {
+      width: 100%;
+      height: 70vh;
+      min-width: 100%;
+      object-fit: cover;
+      display: block; /* Evita espacios extra en la base de la imagen */
+  }
 
+  /* Importante: Asegura que el picture se comporte como el slide */
+  .carousel-slide picture {
+      flex: 0 0 100%; /* Fuerza a que cada picture ocupe el 100% del ancho */
+  }
 .carousel-container {
     height: 70vh;
     position: relative;
@@ -243,8 +262,6 @@ p{font-size: 0.9em;}
 
 
 
-
-
 #compra{
   color: rgb(0, 0, 0);
   height: 40vh;
@@ -260,15 +277,20 @@ p{font-size: 0.9em;}
   color: white;
 }
 
-#compra{
-  height: 50vh;
+#compra a{
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  font-size: 1.5em;
+  font-weight: normal;
 }
 
 #compra .container{
+  margin: 0;
   width: 100%;
   margin: auto;
-  height: 50vh;
+  height: 40vh;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -290,12 +312,7 @@ p{font-size: 0.9em;}
   max-width: 90%;
 }
 
-#compra a{
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-size: 1.5em;
-  font-weight: normal;
-}
+
 
 
 
@@ -364,4 +381,55 @@ footer{
   color: rgb(0, 0, 0);
   text-align: center;
   font-size: 0.7em;
+}
+
+
+
+@media (min-width: 870px) {
+
+  .nav_container{
+      --transform-menu-show: translate(0);
+      width: min(90%, 1920px);
+      justify-content: space-between;
+  }
+
+  .nav_header{
+    padding: 0 50px;
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9),rgba(0,0,0,0.75)), url(/Grizzly/imagenes/osobosque.avif);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .nav_figurepc{
+    display: contents;
+    margin-left: 10px;
+  }
+
+  .nav_figurepc img{
+    height: 50px;
+    width: 80px;
+  }
+
+  .nav_listpc{
+    display: flex;
+    gap: 40px;
+    list-style: none;
+  }
+
+  .nav_figure{
+    display: none;
+  }
+
+  .nav_list{
+    display: none;
+  }
+
+  .nav_toggle{
+      display: none;
+    }
+
+
+
+
 }

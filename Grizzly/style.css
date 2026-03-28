@@ -323,7 +323,7 @@ body{
   align-items: center;
   margin: 10px;
   padding: 10px;
-  border-radius: 25px;
+  border-radius: 15px;
   display: flex;
   justify-content: center;
   
@@ -441,6 +441,24 @@ footer{
     flex-direction: row;
     margin: auto;
     width: 800px;
+  }
+
+  #modelos h2{
+    font-size: 4em;
+  }
+
+  #contactos{
+    height: 10vh;
+    padding: 5px 0;
+    align-items: end;
+  }
+
+  #contactos h1{
+    display: none;
+  }
+
+  #contactos ul{
+    display: flex;
   }
 
 }
